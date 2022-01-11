@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-color: #e0e0e0;
+	color: #222629;
+}
+
+main {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 2rem;
+}
+main .header {
+	width: 500px;
+	padding: 10px;
+	margin-bottom: 50px;
+	border-radius: 17px;
+background: linear-gradient(145deg, #cacaca, #f0f0f0);
+box-shadow:  5px 5px 10px #b5b5b5,
+             -5px -5px 10px #ffffff;
+}
+main .header h1 {
+	font-size: 2.5rem;
+	text-transform: capitalize;
+	margin-bottom: 0.5rem;
+}
+
+main .header h1 ~ p {
+	margin-bottom: 2rem;
+	font-size: 1.2rem;
+	color: #65696d;
+}
+
+main .create-new {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 480px;
+}
+
+main .create-new input {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #FFF;
+	background-color: transparent;
+	color: #868686;
+	font-size: 1.5rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin: 0;
+	transition: 0.4s;
+}
+
+main .create-new input:focus {
+	border-bottom-color: rgb(61, 162, 245);
+}
+
+main .create-new button {
+	appearance: none;
+	border: none;
+	outline: none;
+	/* background-color: rgb(61, 162, 245); */
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+	font-size: 1.5rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	margin-left: 0.5rem;
+	cursor: pointer;
+
+	background: #e0e0e0;
+	box-shadow:  5px 5px 10px #b5b5b5,
+				-5px -5px 10px #ffffff;
+	transition: 0.2s;
+}
+main .create-new button:hover{
+background: #e0e0e0;
+box-shadow: 0px 0px 0px #b5b5b5, 0px 0px 0px #fff,
+      inset 4px 4px 8px #b5b5b5, inset -4px -4px 8px #fff;
+}
+main .tasks {
+	width: 100%;
+	max-width: 480px;
+	margin-top: 2rem;
+}
+
+main .tasks .task {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin-bottom: 1rem;
+	font-size: 1.2rem;
+	background: linear-gradient(145deg, #cacaca, #f0f0f0);
+	box-shadow:  5px 5px 10px #b5b5b5,
+				-5px -5px 10px #ffffff;
+	transition: 0.1s;
+	word-break: normal;
+}
+main .tasks .task:hover{
+	background: #e0e0e0;
+	box-shadow: 0px 0px 0px #b5b5b5, 0px 0px 0px #fff,
+		inset 4px 4px 8px #b5b5b5, inset -4px -4px 8px #fff;
+}
+
+main .tasks .task .buttons {
+	min-width: fit-content;
+}
+
+main .tasks .task button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background-color: #3acc4e;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	font-size: 0.875rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	margin-left: 0.5rem;
+	cursor: pointer;
+
+	border: 0.2rem solid #e0e0e0;
+	box-shadow:  5px 5px 10px #b5b5b5,
+				-5px -5px 10px #ffffff;
+	transition: 0.2s;
+}
+main .tasks .task button:hover {
+	background-color: #eed024;
+	box-shadow: 0px 0px 0px #a8910c, 0px 0px 0px #f5df65,
+		inset 4px 4px 8px #a8910c, inset -4px -4px 8px #f5df65;
+}
+
+main .tasks .task button.delete {
+	background-color: crimson;
+	color: #EEE;
+}
+main .tasks .task button.delete:hover{
+	background-color: #eed024;
+	box-shadow: 0px 0px 0px #a8910c, 0px 0px 0px #f5df65,
+		inset 4px 4px 8px #a8910c, inset -4px -4px 8px #f5df65;
+}
+.tasks .task.is-complete {
+	opacity: 0.7;
+	background: #cccccc;
+	box-shadow: inset 4px 4px 8px #9f9f9f,
+				inset -4px -4px 8px #ffffff;
+}
+
+.tasks .task.is-complete .content {
+	text-decoration: line-through;
+}
+
+/* responsive */
+@media screen and (min-width: 900px){
+	main .header{
+		width: 800px;
+		padding: 30px;
+	}
+	main .header h1{
+		font-size: 3rem;
+	}
+	main .create-new input{
+		min-width: 700px;
+		font-size: 1.2rem;
+	}
+	main .tasks{
+		min-width: 800px;
+	}
+	main .tasks .task{
+		font-size: 1.2rem;
+	}
+	main .tasks .task button{
+		font-size: 1.2rem;
+		border-radius: 0.5rem;
+	}
+}
+
+
+@media screen and (max-width: 600px){
+	main .header{
+		width: 380px;
+	}
+	main .header h1{
+		font-size: 2rem;
+	}
+	main .create-new input{
+		width: 330px;
+		font-size: 1.2rem;
+	}
+	main .tasks{
+		width: 380px;
+	}
+	main .tasks .task{
+		font-size: 1rem;
+	}
+	main .tasks .task button{
+		font-size: 0.7rem;
+		padding: 4px;
+		border-radius: 0.5rem;
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 450px){
+	main .header{
+		width: 300px;
+	}
+	main .header h1{
+		font-size: 2rem;
+	}
+	main .create-new input{
+		width: 260px;
+		font-size: 1.2rem;
+	}
+	main .tasks{
+		width: 300px;
+	}
+	main .tasks .task{
+		font-size: 1rem;
+	}
+	main .tasks .task button{
+		font-size: 0.7rem;
+		padding: 4px;
+		border-radius: 0.5rem;
+		margin-left: 0;
+	}
+}
+
+main .icon{
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+} 
+main .icon .icon2{
+	font-size: 0.7rem;
+	color: #636363;
+}
+main .icon a{
+	text-decoration: none;
+	margin-left: 5px;
+	color: #246bee;
+}
+main .icon .icon2 a{
+	text-decoration: none;
+	margin-left: 0;
+	color: #636363;
+}
+main .social img{
+	max-width: 40px;
+	border: 5px solid #e0e0e0;
+	border-radius: 50%;
+	background: #e0e0e0;
+	box-shadow:  3px 3px 6px #969696,
+             -3px -3px 6px #ffffff;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+main .social img:hover{
+	border: 5px solid #3395d6;
+}
+main .header .divider{
+	width: 100%;
+	height: 7px;
+	border-radius: 17px;
+	background: #e0e0e0;
+	box-shadow: inset 1px 1px 3px #969696,
+				inset -1px -1px 3px #ffffff;
+}
